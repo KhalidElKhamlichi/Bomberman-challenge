@@ -10,11 +10,11 @@ import java.util.List;
 public class Map {
 
     private String[][] data;
-    private List<Rock> rocks = new ArrayList<>();
+    private final List<Rock> rocks = new ArrayList<>();
     private Bomberman bomberman;
-    private List<Bomb> bombs = new ArrayList<>();
+    private final List<Bomb> bombs = new ArrayList<>();
 
-    private int size;
+    private final int size;
 
     public Map(int size) {
         this.size = size;

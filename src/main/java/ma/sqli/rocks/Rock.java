@@ -4,13 +4,13 @@ import ma.sqli.bomberman.Bomberman;
 
 public interface Rock {
 
-    public void destroyed();
+    void destroyed();
 
-    public int getX();
+    int getX();
 
-    public int getY();
+    int getY();
 
-    public String getRepresentation();
+    String getRepresentation();
 
-    public void reactTo(Bomberman bomberman);
+    void reactTo(Bomberman bomberman);
 }

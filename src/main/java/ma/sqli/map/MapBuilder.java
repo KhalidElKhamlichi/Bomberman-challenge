@@ -6,7 +6,7 @@ import ma.sqli.rocks.StarRock;
 
 public class MapBuilder {
 
-    private Map map;
+    private final Map map;
 
     public MapBuilder(int i) {
         map = new Map(i);
@@ -22,14 +22,12 @@ public class MapBuilder {
         return map;
     }
 
-
     public MapBuilder addStarRock(int x, int y) {
         map.addRock(new StarRock(x, y));
         return this;
     }
 
     public MapBuilder addEnhancerRock(int x, int y, int range) {
-
         map.addRock(new EnhancerRock(x, y, range));
         return this;
     }

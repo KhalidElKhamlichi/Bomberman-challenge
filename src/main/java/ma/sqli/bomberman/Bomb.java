@@ -7,30 +7,16 @@ import java.util.List;
 
 public class Bomb {
 
-    private Location location = new Location();
+    private final Location location = new Location();
 
     private String representation = "o";
 
-    private int range = 1;
+    private int range;
 
     public Bomb(int x, int y, int range) {
         this.location.x = x;
         this.location.y = y;
         this.range = range;
-    }
-
-    public boolean canHit(int x, int y) {
-        if(x == this.location.x) {
-            if(y <= this.location.y+range && y >= this.location.y-range)
-                return true;
-        }
-        if(y == this.location.y) {
-            if(x >= this.location.x-range && x <= this.location.x+range)
-                return true;
-        }
-
-        return false;
-
     }
 
     public int getX() {
@@ -63,6 +49,20 @@ public class Bomb {
         if(canHit(bomberman.getX(), bomberman.getY())) {
             bomberman.die();
         }
+    }
+
+    private boolean canHit(int x, int y) {
+        if(x == this.location.x) {
+            if(y <= this.location.y+range && y >= this.location.y-range)
+                return true;
+        }
+        if(y == this.location.y) {
+            if(x >= this.location.x-range && x <= this.location.x+range)
+                return true;
+        }
+
+        return false;
+
     }
 
 

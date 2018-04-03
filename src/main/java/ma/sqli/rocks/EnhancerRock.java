@@ -5,12 +5,12 @@ import ma.sqli.bomberman.Bomberman;
 
 public class EnhancerRock implements Rock {
 
-    private Location location = new Location();
-    private int enhancerRange;
+    private final Location location = new Location();
+    private final int enhancerRange;
 
     private boolean isEnhancer = false;
 
-    private String destroyedRepresentation;
+    private final String destroyedRepresentation;
     private String representation = "X";
 
     public EnhancerRock(int x, int y, int enhancerRange) {

@@ -5,9 +5,7 @@ import ma.sqli.map.Map;
 
 public class Bomberman {
 
-    private String name;
-
-    private Location location = new Location();
+    private final Location location = new Location();
 
     private Direction facingDirection = Direction.RIGHT;
 
@@ -21,7 +19,6 @@ public class Bomberman {
     private int bombRange = 1;
 
     public Bomberman(String name) {
-        this.name = name;
         representation = name.substring(0, 1).toLowerCase();
     }
 

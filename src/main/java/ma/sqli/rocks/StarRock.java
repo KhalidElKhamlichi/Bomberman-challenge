@@ -5,7 +5,7 @@ import ma.sqli.bomberman.Bomberman;
 
 public class StarRock implements Rock {
 
-    private Location location = new Location();
+    private final Location location = new Location();
 
     private boolean isStar = false;
     private final String destroyedRepresentation = "*";
@@ -14,10 +14,6 @@ public class StarRock implements Rock {
     public StarRock(int x, int y) {
         this.location.x = x;
         this.location.y = y;
-    }
-
-    public boolean isStar() {
-        return isStar;
     }
 
     @Override

@@ -5,7 +5,7 @@ import ma.sqli.bomberman.Bomberman;
 
 public class BasicRock implements Rock {
 
-    private Location location = new Location();
+    private final Location location = new Location();
 
     private final String destroyedRepresentation = " ";
     private String representation = "X";
